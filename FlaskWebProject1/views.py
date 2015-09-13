@@ -3,7 +3,7 @@ Routes and views for the flask application.
 """
 
 from datetime import datetime
-from flask import render_template, request, Flask, redirect
+from flask import render_template, request, Flask, redirect, url_for
 from FlaskWebProject1 import app
 import os
 import requests
@@ -113,8 +113,8 @@ def index():
             p.text = "  Thank You"
             p.font.size = Pt(30)            
 
-            prs.save(r'FlaskWebProject1\test.pptx') 
-            return redirect("https://www.google.com")      
+            prs.save(r'FlaskWebProject1\static\test.pptx') 
+            return redirect(url_for('static', filename='test.pptx'))      
 
 
     return render_template('index.html', errors=errors, results=results)
