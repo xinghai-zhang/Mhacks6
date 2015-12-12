@@ -12,6 +12,7 @@ from pptx import Presentation
 from pptx.util import Inches, Pt    
 from reduction import *
 import urllib
+from FlaskWebProject1 import APP_STATIC
 
 
 
@@ -113,8 +114,8 @@ def index():
             p.text = "  Thank You"
             p.font.size = Pt(30)            
 
-            prs.save(r'FlaskWebProject1\static\test.pptx') 
-            return redirect(url_for('static', filename='test.pptx'))      
+            prs.save(os.path.join(APP_STATIC, 'test.pptx')) 
+            return redirect(url_for(APP_STATIC, filename='test.pptx'))      
 
 
     return render_template('index.html', errors=errors, results=results)
