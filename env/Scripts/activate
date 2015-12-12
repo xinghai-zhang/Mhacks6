@@ -39,7 +39,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'C:\Users\Xinghai\Documents\GitHub\TChack\FlaskWebProject1\FlaskWebProject1\env'; else echo '/C/Users/Xinghai/Documents/GitHub/TChack/FlaskWebProject1/FlaskWebProject1/env'; fi;)"
+VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'C:\Users\Xinghai\Documents\GitHub\Mhack6\env'; else echo '/C/Users/Xinghai/Documents/GitHub/Mhack6/env'; fi;)"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -2,6 +2,8 @@ import re, pdb, sys, math
 from os import getcwd
 from collections import defaultdict
 
+import os
+from FlaskWebProject1 import APP_ROOT
 
 class Graph:
 	def __init__(self):
@@ -185,8 +187,8 @@ class Reduction:
 
 	def reduce(self, text, reductionRatio):
 
-		stopWordsFile = r'C:\Users\Xinghai\Documents\GitHub\TChack\FlaskWebProject1\FlaskWebProject1\FlaskWebProject1\stopWords.txt'
-		stopWords= open(stopWordsFile, 'r').read().splitlines()
+
+		stopWords= open(os.path.join(APP_ROOT, 'stopWords.txt')).read().splitlines()
 
 		lines = text.splitlines()
 		contentLines = filter(lambda w: w.strip() != '', lines)

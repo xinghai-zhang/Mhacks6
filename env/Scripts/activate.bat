@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\Users\Xinghai\Documents\GitHub\TChack\FlaskWebProject1\FlaskWebProject1\env"
+set "VIRTUAL_ENV=C:\Users\Xinghai\Documents\GitHub\Mhack6\env"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
