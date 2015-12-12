@@ -115,7 +115,7 @@ def index():
             p.font.size = Pt(30)            
 
             prs.save(os.path.join(APP_STATIC, 'test.pptx')) 
-            return redirect(url_for(APP_STATIC, filename='test.pptx'))      
+            return redirect(url_for('static', filename='test.pptx'))      
 
 
     return render_template('index.html', errors=errors, results=results)
